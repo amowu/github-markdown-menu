@@ -60,9 +60,8 @@ var buildContents = function(links) {
     contents += '<li><a href="' + node.hash + '">' + node.text + '</a></li>';
   }
 
-  while (currentDepth--) {
-    contents += '</ul>';
-  }
+  contents += closeList(--currentDepth);
+  contents += '</ul>';
 
   return contents;
 };
