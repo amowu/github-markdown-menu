@@ -20,14 +20,5 @@
 }
 
 #github-markdown-contents-container ul {
-  list-style-type: none;
-}
-
-#github-markdown-contents-container ul ul {
   padding-left: 1em;
-}
-
-#github-markdown-contents-container a {
-  color: #4183c4;
-  font-weight: bold;
 }

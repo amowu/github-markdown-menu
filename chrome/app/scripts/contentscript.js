@@ -25,7 +25,7 @@ var openList = function(depth) {
   var html = '';
 
   while (depth--) {
-    html += '<li><ul>';
+    html += '<li style="list-style:none;"><ul>';
   }
 
   return html;
@@ -67,15 +67,9 @@ var buildContents = function(links) {
 };
 
 var insertContents = function(contents) {
-  var fileView = false;
   var readmeTarget = document.querySelectorAll('#readme > h3')[0];
-  var markdownTarget;
 
   if (!readmeTarget) {
-    markdownTarget = document.querySelectorAll('.file-actions')[0];
-  }
-
-  if (!readmeTarget && !markdownTarget) {
     return false;
   }
 
@@ -85,8 +79,11 @@ var insertContents = function(contents) {
     oldLink.parentNode.removeChild(oldLink);
   }
 
-  var link = '<span class="github-markdown-contents select-menu js-menu-container js-select-menu"><span class="github-markdown-contents-btn js-select-menu js-menu-target btn btn-sm tooltipped-s' + (markdownTarget ? '' : ' right') + '" role="button" aria-label="Show Table of Contents"><span class="octicon octicon-three-bars"></span></span><div class="select-menu-modal-holder github-markdown-contents-modal-holder js-menu-content js-navigation-container"><div id="github-markdown-contents-container" class="select-menu-modal">' + contents + '</div></div></span>';
-  (readmeTarget || markdownTarget).innerHTML += link;
+  var sidebarTarget = document.querySelectorAll('.repository-sidebar')[0];
+
+  var link = '<nav class="sunken-menu github-markdown-contents" role="navigation"><ul class="sunken-menu-group"><li class="tooltipped"><a href="#" class="selected sunken-menu-item"><span class="octicon octicon-list-unordered"></span> <span class="full-word">Menu</span></a></li><li class="tooltipped tooltipped-w" aria-label="Pull requests"><nav id="github-markdown-contents-container" role="navigation">' + contents + '</nav></li></ul></nav>';
+
+  sidebarTarget.innerHTML += link;
 };
 
 var links = getLinks();
