@@ -1,45 +1,26 @@
-# GitHub Markdown Menu
+# GitHub Markdown Sidebar Menu
 
-> Browser extension that adds a navigation menu to any readme or Markdown file in GitHub.
+> Browser extension that adds a navigation menu to readme file in GitHub sidebar.
 
-GitHub readmes and Markdown documents don't always include a table of contents. Well-documented repos have longer documents that can be difficult to navigate. This extension will automagically generate and add navigation menu with a table of contents.
+GitHub README documents don't always include a Table of Contents. Well-documented repos have longer documents that can be difficult to navigate. This extension will automagically generate and add a navigation menu with a table of contents in GitHub repo homepage sidebar.
 
 Click on the three-bar icon at the top of any Markdown file to view the menu. Click on a link to scroll to that section of the document. That's it!
 
 README example:
-![](screenshot-readme-view-free-for-dev.png)
-
-Markdown view example:
 ![](screenshot-markdown-view-primer.png)
 
 ## Install
 
-[Chrome WebStore](https://chrome.google.com/webstore/detail/github-markdown-menu/jekgocfoijmbgcjejohdgmojaejofdpo)
+[Chrome WebStore](https://chrome.google.com/webstore/detail/github-markdown-sidebar-m/cjbnpllhpmicaacocjjfiickmbggdlkj)
 
 ### For Developers
 
 You can also setup the dev version:
 
-- from the CLI: git clone https://github.com/willklein/github-markdown-menu.git
+- from the CLI: git clone https://github.com/amowu/github-markdown-menu.git
 - open the extensions page: chrome://extensions
 - enable Developer mode
 - click Load unpacked extension, selecting the chrome/app directory
-
-## Supported Browsers
-
-Current:
-- Chrome
-
-Planned:
-- Firefox
-- Safari
-- Opera
-
-I have experience developing Chrome extensions, so that was easiest to start with. I plan to add support for Firefox and then Safari and Opera.
-
-## Help, Issues and Support
-
-Ask questions, post issues, and share suggestions using [Waffle](https://waffle.io/willklein/github-markdown-menu). Waffle is a kanban board backed by GitHub Issues. You can also tweet me [@WillsLab](https://twitter.com/willslab).
 
 ## Permissions
 
@@ -50,17 +31,9 @@ In Chrome, this extension requests the following permissions:
 - Read your browsing history
 > For this extension to work across page navigations within github.com, permissions are necessary to use chrome.webNavigation.onHistoryStateUpdated. This lets the extension hook into page navigations and trigger without full page refreshes.
 
-### More on Permissions
-
-Over the years I've found that certain Chrome APIs required more permissions over time. I've also seen a lot of negative reviews for Chrome extensions wondering why more permissions are being requested. This is understandable; it certainly seems intrusive to ask for more permissions.
-
-I've listed the specific reasons for each permission to explain why they are needed. Between that, and the full source code made available under the [MIT license](http://mit-license.org/), I hope that alleviates any concerns.
-
 ## Contribute
 
-On-going development & open issues are tracked using Waffle: [![Stories in Ready](https://badge.waffle.io/willklein/github-markdown-menu.png?label=ready&title=Ready)](https://waffle.io/willklein/github-markdown-menu)
-
-Let me know what you're hacking [@WillsLab](https://twitter.com/willslab). I'll happily work with you to make your efforts successful!
+On-going development & open issues are tracked using Waffle: [![Stories in Ready](https://badge.waffle.io/amowu/github-markdown-menu.png?label=ready&title=Ready)](https://waffle.io/amowu/github-markdown-menu)
 
 ### Guidelines
 
@@ -75,8 +48,8 @@ The Chrome extension was generated using [Yeoman](http://yeoman.io) and the [Chr
 
 ## About
 
-I work with several well-documented repos, with 500+ line READMEs. I'm thankful for the documentation, but it's hard to parse and find what I'm looking for. I built Markdown Menu to scratch this itch; I hope it might help others too.
+Thanks for [Will Klein](https://github.com/willklein)'s open source project [GitHub Markdown Menu](https://github.com/willklein/github-markdown-menu).
 
 ## License
 
-[MIT](http://mit-license.org/) © [Will Klein](http://willkle.in)
+[MIT](http://mit-license.org/) © [Will Klein](http://willkle.in), [Amo Wu](http://amowu.com)

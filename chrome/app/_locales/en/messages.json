@@ -1,10 +1,10 @@
 {
   "appName": {
-    "message": "GitHub Markdown Menu",
+    "message": "GitHub Markdown Sidebar Menu",
     "description": "The name of the application"
   },
   "appDescription": {
-    "message": "Adds a navigation menu to any readme or Markdown file in GitHub.",
+    "message": "Adds a navigation menu to readme file in GitHub sidebar.",
     "description": "The description of the application"
   }
 }
