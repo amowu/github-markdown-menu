@@ -67,21 +67,9 @@ var buildContents = function(links) {
 };
 
 var insertContents = function(contents) {
-  var readmeTarget = document.querySelectorAll('#readme > h3')[0];
-
-  if (!readmeTarget) {
-    return false;
-  }
-
-  var oldLink = document.querySelectorAll('.github-markdown-contents')[0];
-
-  if (oldLink) {
-    oldLink.parentNode.removeChild(oldLink);
-  }
-
   var sidebarTarget = document.querySelectorAll('.repository-sidebar')[0];
 
-  var link = '<nav class="sunken-menu github-markdown-contents" role="navigation"><ul class="sunken-menu-group"><li class="tooltipped"><a href="#" class="selected sunken-menu-item"><span class="octicon octicon-list-unordered"></span> <span class="full-word">Menu</span></a></li><li class="tooltipped tooltipped-w" aria-label="Pull requests"><nav id="github-markdown-contents-container" role="navigation">' + contents + '</nav></li></ul></nav>';
+  var link = '<nav class="sunken-menu only-with-full-nav github-markdown-contents" role="navigation"><ul class="sunken-menu-group"><li class="tooltipped"><a href="#" class="selected sunken-menu-item"><span class="octicon octicon-list-unordered"></span> <span class="full-word">Menu</span></a></li><li><nav id="github-markdown-contents-container" role="navigation">' + contents + '</nav></li></ul></nav>';
 
   sidebarTarget.innerHTML += link;
 };
